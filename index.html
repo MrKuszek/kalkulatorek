@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang='pl-PL'>
+    <head>
+        <meta charset="utf-8">
+		<title>KALKULATOREK</title>
+        <meta name=author content="Szymon K.">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .all{
+                background: linear-gradient(rgb(111, 168, 46),#aaa);
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .obudowa{
+                width: 600px;
+                height: 700px;
+                background: rgb(9, 66, 66);
+                border-radius: 30px;
+                border: 5px solid rgb(58, 23, 122);
+            }
+            .wyswietlaczz{
+                width: 590px;
+                height: 200px;
+                background: #aaa;
+                border-top-right-radius: 30px;
+                border-top-left-radius: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 2px dashed rgb(187, 73, 73);
+            }
+            #ss{
+                width: 500px;
+                height: 150px;
+                background: rgb(100, 118, 134);
+                font-size: 100px;
+                color: #1b1b1b;
+                
+
+            }
+            #w{
+                position: absolute;
+                bottom:0;
+                left: 20px;
+            }
+            .klawisze{
+                width: 590px;
+                height: 490px;
+                background: rgb(143, 141, 127);
+                border-bottom-right-radius: 30px;
+                border-bottom-left-radius: 30px;
+            }
+            .normalne{
+                float: left;
+                width: 400px;
+                height: 490px;
+				color:#ffffff;
+            }
+            .przycisk{
+                float: left;
+                width: 100px;
+                height: 100px;
+                font-size: 90px;
+                margin-top:20px;
+                margin-left: 20px;
+                border-radius: 20px;
+                background: rgb(96, 94, 209);
+				color:#ffffff;
+            }
+            .przyciskend{
+                float: left;
+                width: 100px;
+                height: 100px;
+                font-size: 90px;
+                margin-top:20px;
+                margin-left: 20px;
+                border-radius: 20px;
+                background: chartreuse;
+				color:#ffffff;
+            }
+			 .przyciskendr{
+                float: left;
+                width: 100px;
+                height: 100px;
+                font-size: 90px;
+                margin-top:20px;
+                margin-left: 20px;
+                border-radius: 20px;
+                background: rgba(96, 94, 209, 0.486);
+				color:#ffffff;
+            }
+            .przycisk:hover{
+                background: lightseagreen;
+            }
+            .przyciskend:hover{
+                background: rgb(201, 230, 39);
+            }
+            .nienormalne{
+                width: 190px;
+                height: 490px;
+                float: left;
+            }
+            .przyciskjebany{
+                float: left;
+                width: 150px;
+                height: 100px;
+                font-size: 90px;
+                margin-top:20px;
+                margin-left: 20px;
+                border-radius: 20px;
+                background: rgba(96, 94, 209, 0.486);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+				color:#ffffff;
+            }
+           input[type=number] { 
+			-moz-appearance: textfield;
+			appearance: textfield;
+			margin: 0; 
+			}
+			input[type=number]::-webkit-inner-spin-button, 
+			input[type=number]::-webkit-outer-spin-button { 
+			-webkit-appearance: none; 
+			margin: 0; 
+			}
+			
+
+        </style>
+		<script>
+		function jeden(){
+		var wyswietlacz=document.getElementById('ss').value;
+			if (wyswietlacz===''| wyswietlacz==='+'|wyswietlacz==='-'|wyswietlacz==='*'|wyswietlacz==='÷'){
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=1;
+			}
+			else if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=wyswietlacz+1;
+			
+			}
+			
+		}
+		function dwa(){
+		var wyswietlacz=document.getElementById('ss').value;
+			if (wyswietlacz===''| wyswietlacz==='+'|wyswietlacz==='-'|wyswietlacz==='*'|wyswietlacz==='÷'){
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=2;
+			}
+			else if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=wyswietlacz+2;
+			
+			}
+			
+		}
+		function dziel(){
+		var wyswietlacz=document.getElementById('ss').value;
+			 if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+			aliczba= new pierwszaliczba('','','',wyswietlacz);
+				var wyswietlacz=document.getElementById('ss').value='÷';
+			
+			}
+			
+		}
+		function trzy(){
+		var wyswietlacz=document.getElementById('ss').value;
+			if (wyswietlacz===''| wyswietlacz==='+'|wyswietlacz==='-'|wyswietlacz==='*'|wyswietlacz==='÷'){
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=3;
+			}
+			else if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=wyswietlacz+3;
+			
+			}
+			
+		}
+		function cztery(){
+		var wyswietlacz=document.getElementById('ss').value;
+			if (wyswietlacz===''| wyswietlacz==='+'|wyswietlacz==='-'|wyswietlacz==='*'|wyswietlacz==='÷'){
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=4;
+			}
+			else if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=wyswietlacz+4;
+			
+			}
+			
+		}
+		function piec(){
+		var wyswietlacz=document.getElementById('ss').value;
+			if (wyswietlacz===''| wyswietlacz==='+'|wyswietlacz==='-'|wyswietlacz==='*'|wyswietlacz==='÷'){
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=5;
+			}
+			else if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=wyswietlacz+5;
+			
+			}
+			
+		}
+		function szejsc(){
+		var wyswietlacz=document.getElementById('ss').value;
+			if (wyswietlacz===''| wyswietlacz==='+'|wyswietlacz==='-'|wyswietlacz==='*'|wyswietlacz==='÷'){
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=6;
+			}
+			else if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=wyswietlacz+6;
+			
+			}
+			
+		}
+		function siedem(){
+		var wyswietlacz=document.getElementById('ss').value;
+			if (wyswietlacz===''| wyswietlacz==='+'|wyswietlacz==='-'|wyswietlacz==='*'|wyswietlacz==='÷'){
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=7;
+			}
+			else if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=wyswietlacz+7;
+			
+			}
+			
+		}
+		function osiem(){
+		var wyswietlacz=document.getElementById('ss').value;
+			if (wyswietlacz===''| wyswietlacz==='+'|wyswietlacz==='-'|wyswietlacz==='*'|wyswietlacz==='÷'){
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=8;
+			}
+			else if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=wyswietlacz+8;
+			
+			}
+			
+		}
+		function dziewiec(){
+		var wyswietlacz=document.getElementById('ss').value;
+			if (wyswietlacz===''| wyswietlacz==='+'|wyswietlacz==='-'|wyswietlacz==='*'|wyswietlacz==='÷'){
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=9;
+			}
+			else if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=wyswietlacz+9;
+			
+			}
+			
+		}
+		function zero(){
+		var wyswietlacz=document.getElementById('ss').value;
+			if (wyswietlacz===''| wyswietlacz==='+'|wyswietlacz==='-'|wyswietlacz==='*'|wyswietlacz==='÷'){
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value='';
+			}
+			else if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+				var wyswietlacz=document.getElementById('ss').value=wyswietlacz+0;
+			
+			}
+			
+		}
+		function plus(liczba){
+		var wyswietlacz=document.getElementById('ss').value;
+			 if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+			aliczba= new pierwszaliczba(wyswietlacz,'','','');
+				var wyswietlacz=document.getElementById('ss').value='+';
+			
+			}
+			
+		}
+		function minius(){
+		var wyswietlacz=document.getElementById('ss').value;
+			 if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+			aliczba= new pierwszaliczba('',wyswietlacz,'','');
+				var wyswietlacz=document.getElementById('ss').value='-';
+			
+			}
+			
+		}
+		function razy(){
+		var wyswietlacz=document.getElementById('ss').value;
+			 if (wyswietlacz=isNaN) {
+			var wyswietlacz=document.getElementById('ss').value;
+					aliczba= new pierwszaliczba('','',wyswietlacz,'');
+				var wyswietlacz=document.getElementById('ss').value='*';
+				
+			}
+			
+		}
+		
+		
+		function c(){
+		var wyswietlacz=document.getElementById('ss').value='';
+		aliczba= new pierwszaliczba('','','','');
+		}
+		function pierwszaliczba(wartoscplus,wartoscminus,wartoscrazy,wartoscdziel){
+		this.wartoscplus=wartoscplus;
+		this.wartoscminus=wartoscminus;
+		this.wartoscrazy=wartoscrazy;
+		this.wartoscdziel=wartoscdziel;
+		}
+		function panieaidzpanw(){
+		var zaciagnijdruga=document.getElementById('ss').value;
+		var drugaliczba=zaciagnijdruga;
+		var plus=aliczba.wartoscplus;
+		var minus=aliczba.wartoscminus;
+		var dziel=aliczba.wartoscdziel;
+		var razy=aliczba.wartoscrazy;
+			if (razy===''&& dziel===''&& minus===''){
+				var nowe=document.getElementById('ss').value=Number(plus)+Number(drugaliczba);
+			}
+			else if (plus==='' && dziel==='' && razy===''){
+				var nowe=document.getElementById('ss').value=(Number(minus)-drugaliczba);
+			}
+			else if (plus==='' && dziel==='' && minus===''){
+				var nowe=document.getElementById('ss').value=Number(razy)*Number(drugaliczba);
+			}
+			else if (plus==='' && minus==='' && razy===''){
+				var nowe=document.getElementById('ss').value=Number(dziel)/Number(drugaliczba);
+			}
+		}
+		
+		
+		
+		
+		</script>
+    </head>
+    <body>
+        <div class="all">
+            <div class="obudowa">
+                <div class="wyswietlaczz">
+                    <input type='text'  id='ss' disabled>
+                    <span id='w'><em>Pani Władzia je super !!!</em></span>
+                </div>
+                <div class="klawisze">
+                    <div class="normalne">
+                        <input type="button" value=1 id='1' onclick='jeden()' class="przycisk">
+                        <input type="button" value=2 id='2' onclick='dwa()' class="przycisk">
+                        <input type="button" value=3 id='3' onclick='trzy()' class="przycisk">
+                        <input type="button" value=4 id='4' onclick='cztery()' class="przycisk">
+                        <input type="button" value=5 id='5' onclick='piec()' class="przycisk">
+                        <input type="button" value=6 id='6' onclick='szejsc()'class="przycisk">
+                        <input type="button" value=7 id='7' onclick='siedem()'class="przycisk">
+                        <input type="button" value=8 id='8'onclick='osiem()' class="przycisk">
+                        <input type="button" value=9 id='9' onclick='dziewiec()'class="przycisk">
+                        <input type="button" value=0 id='0' onclick='zero()'class="przycisk">
+                        <input type="button" value="=" id='end' onclick='panieaidzpanw()' class="przyciskend">             
+						<input type="button" value="÷" id='end' onclick='dziel()' class="przyciskendr"> 
+					</div>
+                    <div class="nienormalne">
+                        <input type="button" value="C" id='c' onclick='c()' class="przyciskjebany">
+                        <input type="button" value="+" id='c' onclick='plus()'class="przyciskjebany">
+                        <input type="button" value="-" id='c' onclick='minius()'class="przyciskjebany">
+                        <input type="button" value="*" id='c' onclick='razy()'class="przyciskjebany">
+                    </div>
+                </div>
+            </div>
+        </div
+    </body>
+</html>
